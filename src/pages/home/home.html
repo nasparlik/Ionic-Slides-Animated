@@ -1,0 +1,32 @@
+<ion-content padding>
+  <ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
+    <ion-slide>
+      <div class="diag" style="background: url('../assets/img/whitebg.svg') no-repeat">
+        <ion-icon ios="ios-analytics" md="md-analytics" color="primary" [@bounce]='state' (@bounce.done)="animationDone($event)" ></ion-icon>
+      </div>
+      <div [@bounce]='state'>
+        <h2>Track your out-of-pocket spending for a week</h2>
+        <p>Keep track of all the money you spend for a week on groceries, gas, meals, clothes, entertainment, personal items, and even coffee and snacks.</p>
+      </div>
+    </ion-slide>
+       <ion-slide>
+            <div class="diag" style="background: url('../assets/img/whitebg.svg') no-repeat">
+        <ion-icon ios="ios-list-box" md="md-list-box" color="primary" [@bounce]='state'></ion-icon>
+      </div>
+      <div [@bounce]='state'>
+        <h2>List your regular monthly bills</h2>
+        <p>such as your mortgage or rent, car loan, utilities, phone, Internet service, cable TV, credit card bills.</p>
+      </div>
+    </ion-slide>
+     <ion-slide>
+     <div class="diag" style="background: url('../assets/img/whitebg.svg') no-repeat">
+        <ion-icon ios="ios-create" md="md-create" color="primary" [@bounce]='state'></ion-icon>
+      </div>
+      <div [@bounce]='state'>
+        <h2>Create a plan</h2>
+        <p>Review all of your expenses for ways to cut back, and then decide what to do with the extra money.</p>
+      </div>
+      </ion-slide>  
+  </ion-slides>
+   <button (click)="skip()" id="skip">{{skipMsg}}</button>
+</ion-content>
